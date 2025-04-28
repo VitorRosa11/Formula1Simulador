@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimuladorDeCampeonatoF1</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <h1>Simulador de resultados - Fórmula 1 2025</h1>
+    <section id="classificacao-atual">
+        <h2>Classificação atual</h2>
+        <h3>Pilotos</h3>
+        <table id="tabela-pilotos">
+            <thead>
+                <tr>
+                    <th>Posição</th>
+                    <th>Piloto</th>
+                    <th>Equipe</th>
+                    <th>Pontos</th>
+                </tr>
+            </thead>
+            <tbody id="corpo-tabela-pilotos"></tbody>
+            </table>
+           <h3>Construtores</h3>
+            <table id="tabela-construtores">
+                <thead>
+                    <tr>
+                        <th>Posição</th>
+                        <th>Equipe</th>
+                        <th>Pontos</th>
+                    </tr>
+                </thead>
+                <tbody id="corpo-tabela-construtores"></tbody>
+            
+        </table>
+    </section>
+
+    <section id="simulador">
+        <h2>Simulador</h2>
+        <form id="form-simulador">
+            <label for="piloto-vencedor">Piloto vencedor:</label>
+            <select id="piloto-vencedor" name="piloto-vencedor"></select>
+            <br><br>
+            <label for="segundo-lugar">Segundo lugar:</label>
+            <select id="segundo-lugar" name="segundo-lugar"></select>
+            <br><br>
+            <label for="terceiro-lugar">Terceiro lugar:</label>
+            <select id="terceiro-lugar" name="terceiro-lugar"></select>
+            <br><br>
+            <label for="quarto-lugar">Quarto lugar:</label>
+            <select id="quarto-lugar" name="quarto-lugar"></select>
+            <br><br>
+            <label for="quinto-lugar">Quinto lugar:</label>
+            <select id="quinto-lugar" name="quinto-lugar"></select>
+            <br><br>
+            <label for="sexto-lugar">Sexto lugar:</label>
+            <select id="sexto-lugar" name="sexto-lugar"></select>
+            <br><br>
+            <label for="setimo-lugar">Sétimo lugar:</label>
+            <select id="setimo-lugar" name="setimo-lugar"></select>
+            <br><br>
+            <label for="oitavo-lugar">Oitavo lugar:</label>
+            <select id="oitavo-lugar" name="oitavo-lugar"></select>
+            <br><br>
+            <label for="nono-lugar">Nono lugar:</label>
+            <select id="nono-lugar" name="nono-lugar"></select>
+            <br><br>
+            <label for="decimo-lugar">Décimo lugar:</label>
+            <select id="decimo-lugar" name="decimo-lugar"></select>
+            <br><br>
+            <label for="decimoPrimeiro-lugar">Décimo primeiro lugar:</label>
+            <select id="decimoPrimeiro-lugar" name="segundo-lugar"></select>
+            <br><br>
+            <label for="decimoSegundo-lugar">Décimo segundo lugar:</label>
+            <select id="decimoSegundo-lugar" name="decimoSegundo-lugar"></select>
+            <br><br>
+            <label for="decimoTerceiro-lugar">Décimo terceiro lugar:</label>
+            <select id="decimoTerceiro-lugar" name="decimoTerceiro-lugar"></select>
+            <br><br>
+            <label for="decimoQuarto-lugar">Décimo quarto lugar:</label>
+            <select id="decimoQuarto-lugar" name="decimoQuarto-lugar"></select>
+            <br><br>
+            <label for="decimoQuinto-lugar">Décimo quinto lugar:</label>
+            <select id="decimoQuinto-lugar" name="decimoQuinto-lugar"></select>
+            <br><br>
+            <label for="decimoSexto-lugar">Décimo sexto lugar:</label>
+            <select id="decimoSexto-lugar" name="decimoSexto-lugar"></select>
+            <br><br>
+            <label for="decimoSetimo-lugar">Décimo sétimo lugar:</label>
+            <select id="decimoSetimo-lugar" name="decimoSetimo-lugar"></select>
+            <br><br>
+            <label for="decimoOitavo-lugar">Décimo oitavo lugar:</label>
+            <select id="decimoOitavo-lugar" name="decimoOitavo-lugar"></select>
+            <br><br>
+            <label for="decimoNono-lugar">Décimo nono lugar:</label>
+            <select id="decimoNono-lugar" name="decimoNono-lugar"></select>
+            <br><br>
+            <label for="vigesimo-lugar">Vigésimo lugar:</label>
+            <select id="vigesimo-lugar" name="vigesimo-lugar"></select>
+            <br><br>
+        
+        
+        </form>
+        <button id="botao-simular">Simular</button>
+        <div id="resultado-simulacao"><!--Resultado da simulação--></div>
+    </section>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+:root{
+    color: rgba(2, 2, 84, 0.718);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(#85858500);
+}
+h1{
+    margin-bottom: 25px;
+    color: brown;
+    background-color: midnightblue;
+}
+button{
+    background-color: rgb(25, 152, 44);
+}
+table {
+   background-color: rgba(90, 91, 93, 0.856);
+   color: #ffff;
+   position: inherit;
+   padding: 20%;
+   border: #000000;
+   height: fit-content;
+}
+thead{
+    color: #ffff;
+    background-color: brown;
+}
+tbody{
+    color: #ffff;
+    background-color: midnightblue;
+}
+section{
+    color: rgb(107, 166, 25);
+}
+form {
+    color: rgb(16, 35, 88);
+    
+}
