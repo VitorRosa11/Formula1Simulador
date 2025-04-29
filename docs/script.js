@@ -62,7 +62,7 @@ function popularTabelaPilotos(){
 }
 function popularTabelaConstrutores(){
     console.log("popular tabela de construtores");
-    const tabela = getElementById("corpo-tabela-construtores");
+    const tabela = document.getElementById("corpo-tabela-construtores");
     tabela.innerHTML = "";
     classificacaoConstrutores.forEach((equipe) =>{
     const linha = document.createElement("tr");
@@ -74,9 +74,113 @@ function popularTabelaConstrutores(){
     console.log("Linha criada:", linha);
     tabela.appendChild(linha);
     });
-    }
+  }
 
-    popularTabelaPilotos();
-    popularTabelaConstrutores();
-    console.log("Tabelas populadas!");
+  //Adicionando opção para selecionar os pilotos
+  const pilotos = classificacaoPilotos.map(piloto => piloto.piloto);
+  const selectVencedor = document.getElementById("piloto-vencedor");
+  const selectSegundoLugar = document.getElementById("segundo-lugar");
+  const selectTerceiroLugar = document.getElementById("terceiro-lugar");
+  const selectQuartoLugar = document.getElementById("quarto-lugar");
+  const selectQuintoLugar = document.getElementById("quinto-lugar");
+  const selectSextoLugar = document.getElementById("sexto-lugar");
+  const selectSetimoLugar = document.getElementById("setimo-lugar");
+  const selectOitavoLugar = document.getElementById("oitavo-lugar");
+  const selectNonoLugar = document.getElementById("mono-lugar");
+  const selectDecimoLugar = document.getElementById("decimo-lugar");
+  const select11Lugar = document.getElementById("decimoPrimeiro-lugar");
+  const select12Lugar = document.getElementById("decimoSegundo-lugar");
+  const select13Lugar = document.getElementById("decimoTerceiro-lugar");
+  const select14Lugar = document.getElementById("decimoQuarto-lugar");
+  const select15Lugar = document.getElementById("decimoQuinto-lugar");
+  const select16Lugar = document.getElementById("decimoSexto-lugar");
+  const select17Lugar = document.getElementById("decimoSetimo-lugar");
+  const select18Lugar = document.getElementById("decimoOitavo-lugar");
+  const select19Lugar = document.getElementById("decimoNono-lugar");
+  const select20Lugar = document.getElementById("vigesimo-lugar");
 
+  pilotos.forEach(piloto=> {
+    const option = document.createElement("option");
+    option.value = piloto;
+    option.text = piloto;
+
+    selectVencedor.appendChild(option.cloneNode(true));
+    selectSegundoLugar.appendChild(option.cloneNode(true));
+    selectTerceiroLugar.appendChild(option.cloneNode(true));
+    selectQuartoLugar.appendChild(option.cloneNode(true));
+    selectQuintoLugar.appendChild(option.cloneNode(true));
+    selectSextoLugar.appendChild(option.cloneNode(true));
+    selectSetimoLugar.appendChild(option.cloneNode(true));
+    selectOitavoLugar.appendChild(option.cloneNode(true));
+    selectNonoLugar.appendChild(option.cloneNode(true));
+    selectDecimoLugar.appendChild(option.cloneNode(true));
+    select11Lugar.appendChild(option.cloneNode(true));
+    select12Lugar.appendChild(option.cloneNode(true));
+    select13Lugar.appendChild(option.cloneNode(true));
+    select14Lugar.appendChild(option.cloneNode(true));
+    select15Lugar.appendChild(option.cloneNode(true));
+    select16Lugar.appendChild(option.cloneNode(true));
+    select17Lugar.appendChild(option.cloneNode(true));
+    select18Lugar.appendChild(option.cloneNode(true));
+    select19Lugar.appendChild(option.classList(true));
+    select20Lugar.appendChild(option.cloneNode(true));
+    console.log("opções de seleçãp ativadas");
+  });
+
+  //Simulando os resultados. APAGAR A PARTIR DAQUI DEPOIS
+  document.getElementById("botao-simular").addEventListener("click", (e) =>{
+    e.preventDefault();
+    const vencedor = selectVencedor.value;
+    const segundoLugar = selectSegundoLugar.value;
+    const terceiroLugar = selectTerceiroLugar.value;
+    const quartoLugar = selectQuartoLugar.value;
+    const quintoLugar = selectQuintoLugar.value;
+    const sextoLugar = selectSextoLugar.value;
+    const setimoLugar = selectSetimoLugar.value;
+    const oitavoLugar = selectOitavoLugar.value;
+    const nonoLugar = selectNonoLugar.value;
+    const decimoLugar = selectDecimoLugar.value;
+    const dec1Lugar = select11Lugar.value;
+    const dec2Lugar = select12Lugar.value;
+    const dec3Lugar = select13Lugar.value;
+    const dec4Lugar = select14Lugar.value;
+    const dec5Lugar = select15Lugar.value;
+    const dec6Lugar = select16Lugar.value;
+    const dec7Lugar = select17Lugar.value;
+    const dec8Lugar = select18Lugar.value;
+    const dec9Lugar = select19Lugar.value;
+    const ultimoLugar = select20Lugar.value;
+
+    const resultado = `Vencedor: ${vencedor}, 
+    Segundo lugar: ${segundoLugar}, 
+    Terceiro lugar: ${terceiroLugar},
+    Quarto lugar: ${quartoLugar},
+    Quinto lugar: ${quintoLugar},
+    Sexto lugar: ${sextoLugar},
+    Sétimo lugar: ${setimoLugar},
+    Oitavo lugar: ${oitavoLugar},
+    Nono lugar: ${nonoLugar},
+    Décimo lugar: ${decimoLugar},
+    Décimo primeiro lugar: ${dec1Lugar},
+    Décimo segundo lugar: ${dec2Lugar},
+    Décimo terceiro lugar: ${dec3Lugar},
+    Décimo quarto lugar: ${dec4Lugar},
+    Décimo quinto lugar: ${dec5Lugar},
+    Décimo sexto lugar: ${dec6Lugar},
+    Décimo sétimo lugar: ${dec7Lugar},
+    Décimo oitavo lugar: ${dec8Lugar},
+    Décimo nono lugar: ${dec9Lugar},
+    Vigésimo lugar: ${ultimoLugar},
+    `;
+
+    document.getElementById("resultado-simulacao").innerText = resultado;
+    console.log("Evento de clique adicionado ao botão");
+
+  });
+
+  //Chamando as funções para popular as tabelas
+  popularTabelaPilotos();
+  popularTabelaConstrutores();
+  console.log("Tabelas populadas!");
+  
+    
